@@ -16,9 +16,7 @@
 class HuffmanTree
 {
 private:
-	std::shared_ptr<HuffmanNode> leftnode;
-	std::shared_ptr<HuffmanNode> rightnode;
-	std::shared_ptr<HuffmanNode> rootnode;
+	
 
 public:
 	//IMPLEMENT
@@ -33,7 +31,7 @@ public:
 	~HuffmanTree();
 	
 	//method to build tree
-	void buildTree(unordered_map & letters);
+	void buildTree(std::string & letters);
 
 	//method to compress data
 	void compressData(void);
@@ -42,12 +40,13 @@ public:
 class HuffmanNode
 {
 private:
+	char letter;
+	int freq;
 
 public:
 
-	HuffmanNode();
+	HuffmanNode(char l, int f);
 	~HuffmanNode();
-	int volNumberImages(void);
 };
 
 

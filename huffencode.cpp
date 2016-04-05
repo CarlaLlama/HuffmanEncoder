@@ -5,6 +5,8 @@
 
 #include "huffencode.h"
 #include <iostream>
+#include <memory>
+#include <cstdlib>
 #include <fstream>
 #include <sstream>
 #include <vector>
@@ -16,6 +18,9 @@ using namespace std;
 
 HuffmanTree::HuffmanTree(){
 	//one tree or many trees?
+	//std::shared_ptr<HuffmanNode> leftnode;
+	//std::shared_ptr<HuffmanNode> rightnode;
+	//std::shared_ptr<HuffmanNode> rootnode;
 }
 
 HuffmanTree::~HuffmanTree(){
@@ -23,7 +28,7 @@ HuffmanTree::~HuffmanTree(){
 }
 	
 //method to build tree
-void HuffmanTree::buildTree(unordered_map & letters){
+void HuffmanTree::buildTree(string & letters){
 	//one tree with lots of baby trees?
 	//what do I call big tree then?
 }
@@ -33,3 +38,11 @@ void HuffmanTree::compressData(void){
 
 }
 
+HuffmanNode::HuffmanNode(char l, int f){
+	letter = l;
+	freq = f;
+}
+
+HuffmanNode::~HuffmanNode(){
+
+}

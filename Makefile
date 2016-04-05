@@ -1,13 +1,13 @@
 CXX=g++
 CPPFLAGS=-std=c++11
 
-volimg:	volimage.o driver.o
-	$(CXX) -o huffencode driver.o volimage.o $(CPPFLAGS)
+huffencode:	huffencode.o driver.o
+	$(CXX) -o huffencode driver.o huffencode.o $(CPPFLAGS)
 
-volimage.o: volimage.cpp volimage.h
-	$(CXX) -c -o volimage.o volimage.cpp $(CPPFLAGS)
+huffencode.o: huffencode.cpp huffencode.h
+	$(CXX) -c -o huffencode.o huffencode.cpp $(CPPFLAGS)
 
-driver.o: driver.cpp volimage.h
+driver.o: driver.cpp huffencode.h
 	$(CXX) -c -o driver.o driver.cpp $(CPPFLAGS)
 
 clean:

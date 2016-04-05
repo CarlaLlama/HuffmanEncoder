@@ -1,0 +1,8 @@
+# Ignore binary files
+*.o
+
+# Ignore text files
+*.txt
+
+# Ignore script
+huffencode
