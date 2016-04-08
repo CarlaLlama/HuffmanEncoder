@@ -3,6 +3,8 @@
 
 # Ignore text files
 *.txt
+*.hdr
+*.bin
 
 # Ignore script
 huffencode
